@@ -2,7 +2,7 @@
   {
     "name": "Getting Started Example",
     "version": "1.0",
-    "permissions": ["activeTab","declarativeContent","storage"],
+    "permissions": ["activeTab","declarativeContent","storage","<all_urls>"],
     "description": "Build an Extension!",
     "background": {
       "scripts": ["background.js"],
@@ -18,10 +18,14 @@
             
           }
       },
+      "content_scripts":[{
+        "js":["content_scripts.js"],
+        "matches":["<all_urls>"]
+      }],
       "icons": {
         "54": "images/talwegpng.png"
         
       },
       
-    "manifest_version": 1
+    "manifest_version": 2
   }
