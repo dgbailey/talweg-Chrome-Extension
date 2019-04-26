@@ -14,4 +14,5 @@ function constructOptions(kButtonColors) {
 }
 
 // new comment
+//another one
 constructOptions(kButtonColors);
