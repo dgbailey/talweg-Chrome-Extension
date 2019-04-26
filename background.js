@@ -1,11 +1,9 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+
 
 'use strict';
 
 chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({color: '#3aa757'}, function() {
+  chrome.storage.sync.set({name: '#3aa757',password:'test'}, function() {
     console.log("The color is green.");
   });
 });
@@ -13,10 +11,12 @@ chrome.runtime.onInstalled.addListener(function() {
 chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
   chrome.declarativeContent.onPageChanged.addRules([{
     conditions: [new chrome.declarativeContent.PageStateMatcher({
-      pageUrl: {hostEquals: 'developer.chrome.com'},
+      // pageUrl: {hostEquals: 'developer.chrome.com'},
+      css: ["input[type='password']"]
     })
     ],
         actions: [new chrome.declarativeContent.ShowPageAction()]
   }]);
 });
+
 
