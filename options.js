@@ -12,4 +12,6 @@ function constructOptions(kButtonColors) {
     page.appendChild(button);
   }
 }
+
+// new comment
 constructOptions(kButtonColors);
