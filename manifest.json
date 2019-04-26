@@ -5,7 +5,7 @@
     "permissions": ["activeTab","declarativeContent","storage","<all_urls>"],
     "description": "Build an Extension!",
     "background": {
-      "scripts": ["background.js"],
+      "scripts": ["background.js","content_scripts.js"],
       "persistent": false
     },
     "options_page": "options.html",
@@ -18,9 +18,11 @@
             
           }
       },
-      "content_scripts":[{
+      "content_scripts":[
+        {
         "js":["content_scripts.js"],
         "matches":["<all_urls>"]
+        
       }],
       "icons": {
         "54": "images/talwegpng.png"
