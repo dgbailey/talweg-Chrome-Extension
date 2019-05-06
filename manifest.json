@@ -1,6 +1,6 @@
 
   {
-    "name": "Getting Started Example",
+    "name": "Talweg Booking Manager",
     "version": "1.0",
     "permissions": ["activeTab","declarativeContent","storage","<all_urls>"],
     "description": "Build an Extension!",
